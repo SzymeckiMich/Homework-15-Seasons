@@ -18,11 +18,10 @@ public class SeasonUtils {
         return searchedSeason;
     }
 
-    public static void showInfo(Seasons season){
-        if(season!=null) {
+    public static void showInfo(Seasons season) {
+        if (season != null) {
             System.out.println(season.toString() + " " + Arrays.toString(season.getMonths()));
-        }
-        else{
+        } else {
             System.out.println("Nie ma takiej pory roku");
         }
     }
