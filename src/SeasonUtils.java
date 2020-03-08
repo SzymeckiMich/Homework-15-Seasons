@@ -3,22 +3,25 @@ import java.util.Scanner;
 
 public class SeasonUtils {
 
-    public static Seasons enterAndFindSeason() {
-        Scanner scanner = new Scanner(System.in);
-        Seasons[] seasons = Seasons.values();
-        Seasons searchedSeason = null;
+    public static Season enterAndFindSeason() {
+        Season[] seasons = Season.values();
         System.out.println("Podaj porę roku");
+        Scanner scanner = new Scanner(System.in);
         String season = scanner.nextLine();
-        Seasons.valueOf(season);
-        for (int i = 0; i < seasons.length; i++) {
-            if (season.equals(seasons[i].getDescription())) {
-                searchedSeason = seasons[i];
+        return getSeason(seasons, season);
+    }
+
+    private static Season getSeason(Season[] seasons, String season) {
+        Season searchedSeason = null;
+        for (Season value : seasons) {
+            if (season.equals(value.getDescription())) {
+                searchedSeason = value;
             }
         }
         return searchedSeason;
     }
 
-    public static void showInfo(Seasons season) {
+    public static void showInfo(Season season) {
         if (season != null) {
             System.out.println(season.toString() + " " + Arrays.toString(season.getMonths()));
         } else {

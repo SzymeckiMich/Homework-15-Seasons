@@ -1,4 +1,4 @@
-public enum Seasons {
+public enum Season {
     SPRING(new String[]{"Marzec", "Kwiecień", "Maj"}, "wiosna"),
     SUMMER(new String[]{"Czerwiec", "Lipiec", "Sierpień"}, "lato"),
     AUTUMN(new String[]{"Wrzesień", "Październik", "Listopad"}, "jesień"),
@@ -7,7 +7,7 @@ public enum Seasons {
     private final String[] months;
     private final String description;
 
-    Seasons(String[] months, String description) {
+    Season(String[] months, String description) {
         this.months = months;
         this.description = description;
     }
