@@ -14,7 +14,7 @@ public class SeasonUtils {
     private static Season getSeason(Season[] seasons, String season) {
         Season searchedSeason = null;
         for (Season value : seasons) {
-            if (season.equals(value.getDescription())) {
+            if (season.equalsIgnoreCase(value.getDescription())) {
                 searchedSeason = value;
             }
         }
